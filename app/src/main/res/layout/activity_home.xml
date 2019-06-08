@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pattern"
+    tools:context="cde.android.qrscanner.Activity.HomeActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/tikomdik"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            />
+
+        <cde.android.qrscanner.CustomWidgets.CustomTextView
+            android:id="@+id/titleActionBar"
+            android:text="SEROJA"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/lightButton"
+            android:layout_toStartOf="@+id/historyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/copyright"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/long_item_divider_without_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="30dp"
+        android:elevation="100dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:text="Selamat Datang di SEROJA"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"/>
+
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:text="(Seminar Online Jabar Juara)"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"/>
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:text="@string/pembuka"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@color/blueSky"
+            android:clickable="true"
+            android:id="@+id/btn_scanQr"
+            android:onClick="scanSekarang">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/qrcode"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_scanQr"
+                    android:layout_marginTop="-5dp"/>
+
+                <cde.android.qrscanner.CustomWidgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scan Sekarang"
+                    android:layout_below="@id/iv_scanQr"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="@color/hijauMuda"
+            android:clickable="true"
+            android:id="@+id/btn_about"
+            android:onClick="tentangSeroja">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/info"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_about"
+                    android:layout_marginTop="-5dp"/>
+
+                <cde.android.qrscanner.CustomWidgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang SEROJA"
+                    android:layout_below="@id/iv_about"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="-3dp"/>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </GridLayout>
+
+    <include layout="@layout/long_item_divider_without_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pine"
+        android:clickable="true"
+        android:onClick="tentangCDE">
+
+        <ImageView
+            android:id="@+id/iv_cde"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/copyright_putih" />
+
+    </RelativeLayout>
+
+</LinearLayout>

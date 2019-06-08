@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg"
+    android:layout_height="match_parent"
+    tools:context="cde.android.qrscanner.Activity.AboutSerojaActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:clickable="true"
+            android:onClick="backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/ic_back"
+            android:scaleType="centerCrop" />
+
+        <cde.android.qrscanner.CustomWidgets.CustomTextView
+            android:text="Tentang SEROJA"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/backButton"
+            android:layout_toStartOf="@+id/clearButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="36dp"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/long_item_divider_without_margin"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/tikomdik"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"/>
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="SEROJA"/>
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="Seminar Online Jabar Juara adalah rencana program seminar sebagai follow up dari program Virtual Coordinator Training."/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="Dalam SEROJA nanti para VC akan berperan sebagai event organizer atau jika capable akan berperan menjadi narasumber."/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <cde.android.qrscanner.CustomWidgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:text="SEROJA nanti akan dapat dilaksanakan secara serentak dari pusat (Jabar) dan dari wilayah (tiap KCD) yang berkoordinasi dengan pusat (Jabar)."/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
